@@ -1,1 +1,36 @@
 /* main.css with be used for styling and presentation */
+
+/* selector { property-name : value } */
+:root {
+    --green: #00FF00;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+/* asterisk is the universal selector */
+* {
+    color: var(--fontColor);
+    font-family: helvetica;
+}
+  
+body {
+    background: var(--bg);
+}
+
+li {
+    list-style: circle;
+}
+  
+.list {
+    list-style: square;
+}
+
+.dark-theme {
+    --bg: var(--black);
+    --fontColor: var(--white);
+}
+
+.light-theme {
+    --bg: var(--white);
+    --fontColor: var(--black);
+}
