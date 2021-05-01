@@ -1,0 +1,1 @@
+/* apps.js will be used for interactivity of the site */
