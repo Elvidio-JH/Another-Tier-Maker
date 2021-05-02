@@ -4,31 +4,56 @@
 :root {
     --green: #00FF00;
     --white: #ffffff;
-    --black: #000000;
+    --grey: #524f4f;
+    --red: #dd161677;
 }
 
 /* asterisk is the universal selector */
 * {
     color: var(--fontColor);
-    font-family: helvetica;
+    font-family: Helvetica;
 }
   
 body {
     background: var(--bg);
 }
 
-li {
-    list-style: circle;
+/* customizes header */
+.header {
+    overflow: hidden;
+    background-color: var(--headerBg);
+    padding: 30px 20px;
 }
-  
-.list {
-    list-style: square;
+
+/* customizes header links */
+.header a {
+    float: left;
+    color: var(--fontColor);
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+.header a.logo {
+    font-size: 25px;
+    font-weight: italic;
+    color: var(--fontColor);
+}
+
+.header a:hover {
+    background-color: #ddd;
+    color: var(--fontColor);
+}
+
+.header-right {
+    float: right;
+    color: var(--fontColor);
 }
 
 .btn {
-    position: absolute;
-    top: 20px;
-    left: 250px;
     height: 50px;
     width: 50px;
     border-radius: 50%;
@@ -39,16 +64,26 @@ li {
 
 .btn:focus { outline-style: none; }
 
+main {
+    color: --fontColor;
+    border: none;
+    font-size: 40px;
+    padding: 10px;
+    text-align: center;
+}
+
 .light-theme {
     --bg: var(--white);
     --fontColor: var(--black);
-    --btnBg: var(--black);
+    --btnBg: var(--grey);
     --btnFontColor: var(--white);
+    --headerBg:#d1d1d1;
 }
 
 .dark-theme {
-    --bg: var(--black);
+    --bg: var(--grey);
     --fontColor: var(--white);
     --btnBg: var(--white);
-    --btnFontColor: var(--black);
+    --btnFontColor: var(--grey);
+    --headerBg:#333333;
 }
