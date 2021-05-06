@@ -24,11 +24,31 @@
     </div>
 
     <main>
-        <!-- this is where I build the tier maker thing -->
-
         <div class="tier-title" contenteditable="true">
             Tier Subject
         </div>
+
+        <div class="tier-rows" id="tierlist">
+            <button class="btn_settings" onclick="addRow()">Add Row</button>
+            <button class="btn_settings" onclick="deleteRow()">Delete Row</button>
+            <div class="row" id = 1>
+                <section id="tier-name" class="section" contenteditable="true">tier</section>
+                <section id="buttons" class="section">btns</section>
+            </div>
+        </div>
+
+        <br/>
+
+        <div class="icon-tray"></div>
+
+        <div class = "upload-form">
+            <form method="post" enctype="multipart/form-data">
+                <label for="files">Add image:</label>
+                <input id="input" name="my_file[]" type="file" multiple onchange="upload(event)" /><br/>
+            </form>
+        </div>
+
+        <p><img id="output" width="200" /></p>
 
     </main>
 
